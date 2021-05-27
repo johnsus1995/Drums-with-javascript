@@ -58,3 +58,14 @@ body{
     font-weight: bold;
     color: cornsilk;
 }
+
+.rule{
+    color:green;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    
+}
+h2{
+    color: green;
+    font-family: 'Roboto', sans-serif;
+}
