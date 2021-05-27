@@ -43,6 +43,8 @@ $("#startbtn").click(function(){
     if(!started){
         $("#level-title").text("Level "+level);
         $("button").fadeOut(100);
+        $(".rule").fadeOut(100);
+        $("h2").fadeOut(100);
         nextSequence();
         started=true;
     }
@@ -62,9 +64,12 @@ function checkAnswer(currentLevel){
         $("body").addClass("gameOver");
         setTimeout(function(){
             $("body").removeClass("gameOver");
-            $("#level-title").text("Game Over!");
+            $("#level-title").text("Game Over! Score:"+level);
         },500);
-        startOver();
+        // $("#level-title").text("Your score: "+level);
+        setTimeout(function(){
+            startOver();
+        },2000);
     }
 }
 
@@ -73,4 +78,6 @@ function startOver(){
     gamePattern=[];
     started=false;
     $("button").fadeIn(100);
+    $(".rule").fadeIn(100);
+    $("h2").fadeIn(100);
 }
